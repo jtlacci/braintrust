@@ -74,9 +74,9 @@ function App() {
         Brain Trust
       </h1>
 
-      {/* Character Grid - with fixed width */}
+      {/* Character Grid - responsive width */}
       <div className="max-w-3xl mx-auto mb-5">
-        <div className="grid grid-cols-8 gap-2">
+        <div className="grid grid-cols-4 md:grid-cols-8 gap-2">
           {characters.map((char, index) => {
             const isSelected = isCharacterSelected(char);
             return (
@@ -99,10 +99,10 @@ function App() {
         </div>
       </div>
 
-      {/* Main Content Area - Players and Chat side by side */}
-      <div className="flex gap-8">
+      {/* Main Content Area - responsive flex direction */}
+      <div className="flex flex-col md:flex-row gap-8 w-full max-w-7xl mx-auto justify-center">
         {/* Player Selection */}
-        <div className="flex gap-4 h-40">
+        <div className="flex gap-4 h-40 justify-center">
           {selectedPlayers.map((player, index) => (
             <div 
               key={index} 
@@ -134,15 +134,15 @@ function App() {
           ))}
         </div>
 
-        {/* Chat Section */}
-        <div className="w-[400px] bg-gray-100 rounded-lg shadow-xl">
+        {/* Chat Section - adjusted height for mobile */}
+        <div className="w-full md:w-[400px] bg-gray-100 rounded-lg shadow-xl h-[calc(100vh-20rem)] md:h-[600px] flex flex-col">
           {/* Chat Header */}
           <div className="bg-gray-100 p-4 rounded-t-lg flex items-center justify-between">
             <span className="text-gray-800 font-medium">guestimate</span>
           </div>
 
-          {/* Chat Messages */}
-          <div className="h-96 overflow-y-auto p-4 space-y-4">
+          {/* Chat Messages - flexible height */}
+          <div className="flex-1 overflow-y-auto p-4 space-y-4">
             <div className="flex gap-3">
               <div className="w-8 h-8 bg-gray-300 rounded-full flex-shrink-0" />
               <div className="flex-1">
@@ -170,7 +170,7 @@ function App() {
             </div>
           </div>
 
-          {/* Chat Input */}
+          {/* Chat Input - stays at bottom */}
           <div className="p-4 bg-gray-100 rounded-b-lg border-t">
             <div className="flex items-center gap-2 bg-white rounded-full px-4 py-2">
               <input
