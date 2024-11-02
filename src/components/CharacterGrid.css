@@ -1,0 +1,26 @@
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.character-cell {
+  background: #444;
+  border: 2px solid #666;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.character-cell img {
+  width: 100%;
+  height: auto;
+}
+
+.character-name {
+  color: white;
+  font-size: 12px;
+  margin-top: 5px;
+} 

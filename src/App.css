@@ -1,0 +1,137 @@
+.app {
+  background: linear-gradient(180deg, #2c3e50 0%, #1a2533 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.vs-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vs {
+  background: #444;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.back-button {
+  background: #f1c40f;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  background-color: #1a2029;
+  border-radius: 8px;
+}
+
+.character-cell {
+  aspect-ratio: 1;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: center;
+}
+
+.character-cell:hover {
+  background-color: #3a3a3a;
+}
+
+.character-name {
+  color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* Selected player styles */
+.player-card {
+  padding: 8px;
+  color: white;
+}
+
+.hmn-tag {
+  font-size: 1.1em;
+}
+
+.player-position {
+  font-size: 1.1em;
+}
+
+.player-selection {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.player-card {
+  aspect-ratio: 1;
+  width: 80px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  color: white;
+}
+
+.hmn-tag,
+.character-name,
+.player-position {
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+  margin: 2px 0;
+}
+
+.player-selection {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.player-card {
+  aspect-ratio: 1;
+  width: 80px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  color: white;
+}
+
+.hmn-tag,
+.character-name,
+.player-position {
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+  margin: 2px 0;
+}
